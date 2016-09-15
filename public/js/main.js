@@ -28,7 +28,7 @@ const Tabs = require("./components/Tabs");
 const App = require("./components/App");
 
 const createStore = configureStore({
-  log: getValue("logging.actions"),
+  log: true,
   makeThunkArgs: (args, state) => {
     return Object.assign({}, args, { client: getClient(state) });
   }
